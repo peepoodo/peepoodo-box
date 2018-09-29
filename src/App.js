@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import Sound from 'react-sound';
+import {sounds} from './Sounds';
 import './App.css';
 
 class App extends Component {
@@ -8,25 +8,12 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoading: false,
-            error: null,
             isPlaying: false,
-            sounds: null,
+            sounds: sounds,
             currentSound: null
         };
         this.handleClick = this.handleClick.bind(this);
         this.getSoundName = this.getSoundName.bind(this);
-    }
-
-    componentDidMount() {
-        this.setState({isLoading: true});
-
-        axios.get("data/sounds.json")
-            .then(result => this.setState({sounds: result.data, isLoading: false}))
-            .catch(error => this.setState({
-                error,
-                isLoading: false
-            }));
     }
 
     handleClick(sound) {
@@ -39,14 +26,6 @@ class App extends Component {
     }
 
     render() {
-        if (this.state.error) {
-            return <p>{this.state.error.message}</p>;
-        }
-
-        if (this.state.isLoading) {
-            return <p>Loading ...</p>;
-        }
-
         if (this.state.sounds) {
             return (
                 <div className="App">
@@ -75,7 +54,7 @@ class App extends Component {
             );
         }
 
-        return <p>Nothing to see here</p>
+        return <p>Something went wrong</p>
     }
 }
 

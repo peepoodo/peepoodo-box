@@ -1,4 +1,4 @@
-{
+export const sounds = {
   "peepoodo": [
     "generique.wav",
     "prostate.wav"
