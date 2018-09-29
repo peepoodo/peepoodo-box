@@ -1,17 +1,17 @@
 export const sounds = {
   "peepoodo": [
-    "generique.wav",
-    "prostate.wav"
+    "generique.mp3",
+    "prostate.mp3"
   ],
   "kevin": [
-    "vegan.wav",
+    "vegan.mp3",
     "arbre_magique.mp3"
   ],
   "lapine": [
-    "explorer_fesses.wav"
+    "explorer_fesses.mp3"
   ],
   "lapin": [
-    "radis_fesses.wav"
+    "radis_fesses.mp3"
   ],
   "bernard": [
     "sucer.mp3"
