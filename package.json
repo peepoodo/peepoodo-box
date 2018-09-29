@@ -2,6 +2,7 @@
   "name": "peepoodo-box",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://peepoodo.github.io/peepoodo-box",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.5.2",
@@ -10,6 +11,8 @@
     "react-sound": "^1.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
