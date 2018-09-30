@@ -71,7 +71,13 @@ body {
     border: 2px solid black;
     border-radius: 50%;
     margin-bottom: 15px;
-    max-width: 150px;
+    max-width: 100px;
+}
+
+@media (min-width: 500px) {
+    .Avatar {
+        max-width: 150px;
+    }
 }
 
 .SoundName {
